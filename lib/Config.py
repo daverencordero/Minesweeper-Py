@@ -1,5 +1,6 @@
 import os
 import socket
+from pathlib import Path
 
 class Config:
 	def __init__(cfg):
@@ -17,10 +18,10 @@ class Config:
 				os.system('pip install pygame')
 				os.system('pip install PyTweening')
 			else:
-				os.system('pip install "'+os.getcwd()+'\\_commonredist\\keyboard.zip"')
-				os.system('pip install "'+os.getcwd()+'\\_commonredist\\numpy.zip"')
-				os.system('pip install "'+os.getcwd()+'\\_commonredist\\pygame.zip"')
-				os.system('pip install "'+os.getcwd()+'\\_commonredist\\PyTweening.zip"')
+				os.system('pip install "'+os.getcwd()+Path('\\_commonredist\\keyboard.zip"'))
+				os.system('pip install "'+os.getcwd()+Path('\\_commonredist\\numpy.zip"'))
+				os.system('pip install "'+os.getcwd()+Path('\\_commonredist\\pygame.zip"'))
+				os.system('pip install "'+os.getcwd()+Path('\\_commonredist\\PyTweening.zip"'))
 			cfg.set("first_run","1")
 			cfg.update()
 
